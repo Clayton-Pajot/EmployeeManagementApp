@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Pics Example</title>
+    <meta charset="utf-8" />
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+    <!--=============== WHAT THE LAB SAYS TO PUT IN =================================================================================================-->
+    <!--<nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand mx-3" href="#">Pics Exercises</a>
+        <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/updatewithpics.html" data-bs-toggle="modal" data-bs-target="#myModal">lab14</a>
+                </li>
+            </ul>
+        </div>
+    </nav>-->
+    <!-- search panel  -->
+    
+
+
+
+    <!--=============== CASE STUDY =================================================================================================-->
+
+    <!----------------------------------- NAVIGATION --------------------------------------------------------------->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <h1 class="navbar-brand mx-3" href="#">Case Study #1</h1>
+        <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mx-3">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/employeelookup.html">Employee Lookup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/employees.html">List and Add Employees</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/search.html">Employee Search </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/updatewithpics.html">Add Employee Pics</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!----------------------------------- LOGO,Text, and Lookup Button --------------------------------------------------------------->
+    <div class="text-center">
+
+        <img src="img/logo.png" alt="logo" height="200" width="200" />
+        <div class="justify-content-center align-items-center row mt-5 ml-1">
+            <div class="col-12 text-center p-3">
+                <h2>Update Employee Pictures</h2>
+
+
+
+                <!--------------------------------------------------------SEARCH BAR-->
+                <div class="card col-10 col-sm-4 text-center mt-5" style="margin: 0 auto; float: none;">
+                    <div class="card-heading text-center">
+                        Search for Employee to update
+                    </div>
+                    <div class="card-body">
+                        <input type="text" placeholder="Enter E-mail Address" id="srch" class="form-control" />
+
+                        <input type="button" value="Find" id="getbutton" class="mt-2" />
+                    </div>
+                    <div id="status" cass="text-left mt-3 mb-2"></div>
+                </div>
+
+
+
+        <!--body-->
+        <!----DISPLAY TABLE-->
+        <form id="EmployeeModalForm" name="EmployeeModalForm" method="post" action="">
+            <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="myModalLabel">Update with Pics</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mx-4 my-4">
+                                <div class="card">
+                                    <div class="card-header text-center">
+                                        Update Employee with Pics
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-4">Title: </div>
+                                            <div class="col-8"><input type="text" placeholder="enter title" id="TextBoxTitle" name="TextBoxTitle" class="form-control" /></div>
+                                        </div>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">First: </div>
+                                            <div class="col-8"><input type="text" placeholder="enter first name" id="TextBoxFirstName" name="TextBoxFirstName" class="form-control" /></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">Surname: </div>
+                                            <div class="col-8"><input type="text" placeholder="enter last name" id="TextBoxLastName" name="TextBoxLastName" class="form-control" /></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">Phone#: </div>
+                                            <div class="col-8"><input type="text" placeholder="enter phone number" id="TextBoxPhone" name="TextBoxPhone" class="form-control" /></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">Email: </div>
+                                            <div class="col-8"><input type="text" placeholder="enter email" id="TextBoxEmail" name="TextBoxEmail" class="form-control" /></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">Department: </div>
+                                            <div class="col-8"><select id="ddlDepartments" name="ddlDepartments" class="form-control" /></div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-4">Test: </div>
+                                            <div class="col-8"><input type="text" placeholder="" id="temp" name="temp" class="form-control" /></div>
+                                        </div><!--for some reason my picture line won't show up without this line above it-->
+
+                                        <div class="row mt-3">
+                                            <div class="col-4">Picture: </div>
+                                            <div class="col-8" id="imageBox">  <!--pic goes here--> </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-center">
+                                <input type="file" id="uploader" class="border float-start col-10 col-sm-4" />
+                                <input type="button" class="col-2" value="Update" id="updatebutton" />
+                                <div id="modalStatus" class="text-left mt-3 mb-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!--scripts-->
+        <script src="lib/js/jquery.min.js"></script>
+        <script src="lib/js/jquery.validate.min.js"></script>
+        <script src="lib/js/bootstrap.min.js"></script>
+        <script src="js/search.js"></script>
+</body>
+</html>

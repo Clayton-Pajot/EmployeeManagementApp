@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+
+namespace HelpDeskDAL
+{
+    public class HelpDeskEntity
+    {
+        public int Id { get; set; }
+        [Timestamp]
+
+        public byte[] Timer { get; set; } = null!;
+
+
+    }
+}
